@@ -50,7 +50,7 @@ class ClaroBill: Mappable {
         }
     }
     var value: Double = 0
-    var expireDate = Date()
+    var expireDate = Date(timeIntervalSince1970: 0)
     var city = ""
     var accountType = Claro.AccountType.mobile
     
@@ -60,7 +60,7 @@ class ClaroBill: Mappable {
     func mapping(map: Map) {
         id <- map["response.facturaActual.numeroFactura"]
         valueStr <- map["response.facturaActual.valor"]
-        expireDate <- (map["response.facturaActual.pagoOportuno"], BillDateTransform())
+        expireDate <- (map["response.facturaActual.pagoOportuno"], BillDateTransform(localeId: "es"))
         city <- map["response.usuario.ciudad"]
         
     }

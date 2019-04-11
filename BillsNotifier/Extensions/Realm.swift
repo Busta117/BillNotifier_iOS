@@ -10,7 +10,7 @@ import Realm
 import RealmSwift
 
 public extension Object {
-    public func save() {
+    func save() {
         do {
             let realm = try Realm()
             do {
@@ -26,7 +26,7 @@ public extension Object {
         }
     }
 
-    public func update<T: Object>(_ updates: @escaping (_ object: T) -> Void) {
+    func update<T: Object>(_ updates: @escaping (_ object: T) -> Void) {
         do {
             let realm = try Realm()
 
@@ -45,7 +45,7 @@ public extension Object {
 }
 
 public extension Realm {
-    public class func update(_ updateClosure: @escaping (_ realm: Realm) -> Void) {
+    class func update(_ updateClosure: @escaping (_ realm: Realm) -> Void) {
         do {
             let realm = try Realm()
             do {
@@ -61,7 +61,7 @@ public extension Realm {
         }
     }
 
-    public class func query(_ queryClosure: @escaping (_ realm: Realm) -> Void) {
+    class func query(_ queryClosure: @escaping (_ realm: Realm) -> Void) {
         do {
             let realm = try Realm()
             queryClosure(realm)

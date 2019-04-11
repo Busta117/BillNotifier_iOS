@@ -19,11 +19,13 @@
 		7F2C5399223DA21700577A8D /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C5398223DA21700577A8D /* NumberFormatter.swift */; };
 		7F2C539B223DA63400577A8D /* EPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C539A223DA63400577A8D /* EPM.swift */; };
 		7F2C539D223DB0FA00577A8D /* LocalPushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C539C223DB0FA00577A8D /* LocalPushNotification.swift */; };
-		7F2C539F223DCF1000577A8D /* BillListClaroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C539E223DCF1000577A8D /* BillListClaroTableViewCell.swift */; };
-		7F2C53A1223DCF2000577A8D /* BillListEpmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C53A0223DCF2000577A8D /* BillListEpmTableViewCell.swift */; };
 		7F2C53A3223DD06000577A8D /* BillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C53A2223DD06000577A8D /* BillListViewModel.swift */; };
 		7F2C53A5223DD2EC00577A8D /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C53A4223DD2EC00577A8D /* Realm.swift */; };
 		7F2C53A7223DD33800577A8D /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C53A6223DD33800577A8D /* Bill.swift */; };
+		7FD188A9225FD0FE00388CAC /* BillListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188A8225FD0FE00388CAC /* BillListTableViewCell.swift */; };
+		7FD188AB225FE72500388CAC /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188AA225FE72500388CAC /* UIBarButtonItem.swift */; };
+		7FD188AD225FE79200388CAC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188AC225FE79200388CAC /* UIImage.swift */; };
+		7FD188B1225FE7FA00388CAC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188B0225FE7F900388CAC /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,11 +42,13 @@
 		7F2C5398223DA21700577A8D /* NumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		7F2C539A223DA63400577A8D /* EPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPM.swift; sourceTree = "<group>"; };
 		7F2C539C223DB0FA00577A8D /* LocalPushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPushNotification.swift; sourceTree = "<group>"; };
-		7F2C539E223DCF1000577A8D /* BillListClaroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListClaroTableViewCell.swift; sourceTree = "<group>"; };
-		7F2C53A0223DCF2000577A8D /* BillListEpmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListEpmTableViewCell.swift; sourceTree = "<group>"; };
 		7F2C53A2223DD06000577A8D /* BillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListViewModel.swift; sourceTree = "<group>"; };
 		7F2C53A4223DD2EC00577A8D /* Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		7F2C53A6223DD33800577A8D /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		7FD188A8225FD0FE00388CAC /* BillListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListTableViewCell.swift; sourceTree = "<group>"; };
+		7FD188AA225FE72500388CAC /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		7FD188AC225FE79200388CAC /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		7FD188B0225FE7F900388CAC /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B12F75A53B8DED2C9410AFFB /* Pods-BillsNotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsNotifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF186F6D346851B3F0221CF /* Pods-BillsNotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsNotifier.release.xcconfig"; path = "Pods/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier.release.xcconfig"; sourceTree = "<group>"; };
 		EE802D8009778065F850706D /* Pods_BillsNotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillsNotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,25 +87,59 @@
 		7F2C537F223D8DD900577A8D /* BillsNotifier */ = {
 			isa = PBXGroup;
 			children = (
-				7F2C53A4223DD2EC00577A8D /* Realm.swift */,
-				7F2C5398223DA21700577A8D /* NumberFormatter.swift */,
 				7F2C5380223D8DD900577A8D /* AppDelegate.swift */,
-				7F2C5382223D8DD900577A8D /* ViewController.swift */,
+				7FD188B2225FF07B00388CAC /* Extensions */,
+				7FD188B3225FF08F00388CAC /* Model */,
+				7FD188B5225FF0D000388CAC /* Controller */,
 				7F2C5384223D8DD900577A8D /* Main.storyboard */,
 				7F2C5387223D8DDC00577A8D /* Assets.xcassets */,
 				7F2C5389223D8DDC00577A8D /* LaunchScreen.storyboard */,
 				7F2C538C223D8DDC00577A8D /* Info.plist */,
-				7F2C5392223D8E1000577A8D /* Claro.swift */,
-				7F2C5394223D996600577A8D /* DataRequest.swift */,
-				7F2C5396223D9A8900577A8D /* DateTransform.swift */,
-				7F2C539A223DA63400577A8D /* EPM.swift */,
-				7F2C539C223DB0FA00577A8D /* LocalPushNotification.swift */,
-				7F2C539E223DCF1000577A8D /* BillListClaroTableViewCell.swift */,
-				7F2C53A0223DCF2000577A8D /* BillListEpmTableViewCell.swift */,
-				7F2C53A2223DD06000577A8D /* BillListViewModel.swift */,
-				7F2C53A6223DD33800577A8D /* Bill.swift */,
 			);
 			path = BillsNotifier;
+			sourceTree = "<group>";
+		};
+		7FD188B2225FF07B00388CAC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F2C53A4223DD2EC00577A8D /* Realm.swift */,
+				7FD188AA225FE72500388CAC /* UIBarButtonItem.swift */,
+				7FD188AC225FE79200388CAC /* UIImage.swift */,
+				7FD188B0225FE7F900388CAC /* UIView.swift */,
+				7F2C5398223DA21700577A8D /* NumberFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7FD188B3225FF08F00388CAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F2C5392223D8E1000577A8D /* Claro.swift */,
+				7F2C539A223DA63400577A8D /* EPM.swift */,
+				7F2C53A6223DD33800577A8D /* Bill.swift */,
+				7F2C5394223D996600577A8D /* DataRequest.swift */,
+				7F2C5396223D9A8900577A8D /* DateTransform.swift */,
+				7F2C539C223DB0FA00577A8D /* LocalPushNotification.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7FD188B4225FF0C400388CAC /* BillList */ = {
+			isa = PBXGroup;
+			children = (
+				7F2C5382223D8DD900577A8D /* ViewController.swift */,
+				7FD188A8225FD0FE00388CAC /* BillListTableViewCell.swift */,
+				7F2C53A2223DD06000577A8D /* BillListViewModel.swift */,
+			);
+			path = BillList;
+			sourceTree = "<group>";
+		};
+		7FD188B5225FF0D000388CAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7FD188B4225FF0C400388CAC /* BillList */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8EF05D22D75D71D9C3DEA90F /* Pods */ = {
@@ -155,6 +193,7 @@
 				TargetAttributes = {
 					7F2C537C223D8DD900577A8D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -198,14 +237,13 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -221,7 +259,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -229,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C00B99134DF022C4A5CA8DA1 /* [CP] Check Pods Manifest.lock */ = {
@@ -262,17 +299,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F2C539D223DB0FA00577A8D /* LocalPushNotification.swift in Sources */,
+				7FD188AB225FE72500388CAC /* UIBarButtonItem.swift in Sources */,
 				7F2C5393223D8E1000577A8D /* Claro.swift in Sources */,
 				7F2C539B223DA63400577A8D /* EPM.swift in Sources */,
 				7F2C53A3223DD06000577A8D /* BillListViewModel.swift in Sources */,
-				7F2C539F223DCF1000577A8D /* BillListClaroTableViewCell.swift in Sources */,
 				7F2C5399223DA21700577A8D /* NumberFormatter.swift in Sources */,
 				7F2C5383223D8DD900577A8D /* ViewController.swift in Sources */,
 				7F2C5381223D8DD900577A8D /* AppDelegate.swift in Sources */,
+				7FD188AD225FE79200388CAC /* UIImage.swift in Sources */,
 				7F2C5397223D9A8900577A8D /* DateTransform.swift in Sources */,
 				7F2C5395223D996600577A8D /* DataRequest.swift in Sources */,
-				7F2C53A1223DCF2000577A8D /* BillListEpmTableViewCell.swift in Sources */,
+				7FD188B1225FE7FA00388CAC /* UIView.swift in Sources */,
 				7F2C53A5223DD2EC00577A8D /* Realm.swift in Sources */,
+				7FD188A9225FD0FE00388CAC /* BillListTableViewCell.swift in Sources */,
 				7F2C53A7223DD33800577A8D /* Bill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = info.santiagobustamante.BillsNotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "MedAnswers Wildcard Development";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -450,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = info.santiagobustamante.BillsNotifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -37,6 +37,8 @@ class BillListViewModel {
                         self.billsGotten.value.append(contentsOf: epmBills)
                     }
                 })
+            } else if bill.provider == .Otro {
+                self.setupAlerts(forBill: bill)
             }
         }
         
@@ -47,6 +49,13 @@ class BillListViewModel {
             LocalPushNotification.setup(for: notification)
         })
 
+    }
+    
+    func setupAlerts(forBill bill: Bill) {
+        Notification.notifications(for: bill).forEach({ notification in
+            LocalPushNotification.setup(for: notification)
+        })
+        
     }
     
     func setupAlerts(forBills bills: [EPMBill]) {

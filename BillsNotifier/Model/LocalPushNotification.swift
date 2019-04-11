@@ -74,6 +74,43 @@ struct Notification {
         return notifications
     }
     
+    static func notifications(for bill: Bill) -> [Notification] {
+        
+        
+        var date1 = bill.dueDate
+        let today = Date()
+        
+        if date1 < today && bill.isMonthly {
+
+            let dateCurrentMonth = Date(year: date1.year, month: today.month, day: date1.day)
+            if dateCurrentMonth < Date(year: today.year, month: today.month, day: today.day) {
+                date1 = dateCurrentMonth.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 0, weeks: 0, months: 1, years: 0))
+            } else {
+                date1 = dateCurrentMonth
+            }
+        }
+        
+        
+        // 3 days before
+        date1 = date1.add(TimeChunk(seconds: 0, minutes: 0, hours: 10, days: 0, weeks: 0, months: 0, years: 0))
+        date1 = date1.subtract(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 3, weeks: 0, months: 0, years: 0))
+        
+        let subtitle1 = "Parcero, la factura de \(bill.billTitle) vence en 3 dias"
+        let notification1 = Notification(id: "\(bill.number)", date: date1, title: "Factura", subtitle: subtitle1, count: 0)
+        
+        // 2 days before
+        let date2 = date1.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 1, weeks: 0, months: 0, years: 0))
+        let subtitle2 = "Parcero, la factura de \(bill.billTitle) vence en 2 dias"
+        let notification2 = Notification(id: "\(bill.number)", date: date2, title: "Factura", subtitle: subtitle2, count: 1)
+        
+        // same day
+        let date3 = date2.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 2, weeks: 0, months: 0, years: 0))
+        let subtitle3 = "Parcero, la factura de \(bill.billTitle) vence HOY!!"
+        let notification3 = Notification(id: "\(bill.number)", date: date3, title: "Factura", subtitle: subtitle3, count: 2)
+        
+        return [notification1, notification2, notification3]
+    }
+    
 }
 
 class LocalPushNotification {
