@@ -12,4 +12,6 @@ target 'BillsNotifier' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxRealm'
+  
+  pod 'XMLMapper'
 end

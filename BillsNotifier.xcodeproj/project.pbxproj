@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,9 @@
 		7FD188AB225FE72500388CAC /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188AA225FE72500388CAC /* UIBarButtonItem.swift */; };
 		7FD188AD225FE79200388CAC /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188AC225FE79200388CAC /* UIImage.swift */; };
 		7FD188B1225FE7FA00388CAC /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD188B0225FE7F900388CAC /* UIView.swift */; };
+		7FE8239222F1FDA700883A30 /* Enel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8239122F1FDA700883A30 /* Enel.swift */; };
+		7FE8239422F3B2FF00883A30 /* Acueducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8239322F3B2FF00883A30 /* Acueducto.swift */; };
+		7FE8239622F3BD6900883A30 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE8239522F3BD6900883A30 /* Regex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		7FD188AA225FE72500388CAC /* UIBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		7FD188AC225FE79200388CAC /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		7FD188B0225FE7F900388CAC /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		7FE8239122F1FDA700883A30 /* Enel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enel.swift; sourceTree = "<group>"; };
+		7FE8239322F3B2FF00883A30 /* Acueducto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acueducto.swift; sourceTree = "<group>"; };
+		7FE8239522F3BD6900883A30 /* Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		B12F75A53B8DED2C9410AFFB /* Pods-BillsNotifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsNotifier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier.debug.xcconfig"; sourceTree = "<group>"; };
 		DEF186F6D346851B3F0221CF /* Pods-BillsNotifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillsNotifier.release.xcconfig"; path = "Pods/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier.release.xcconfig"; sourceTree = "<group>"; };
 		EE802D8009778065F850706D /* Pods_BillsNotifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BillsNotifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +113,7 @@
 				7FD188AC225FE79200388CAC /* UIImage.swift */,
 				7FD188B0225FE7F900388CAC /* UIView.swift */,
 				7F2C5398223DA21700577A8D /* NumberFormatter.swift */,
+				7FE8239522F3BD6900883A30 /* Regex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -114,6 +121,8 @@
 		7FD188B3225FF08F00388CAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7FE8239322F3B2FF00883A30 /* Acueducto.swift */,
+				7FE8239122F1FDA700883A30 /* Enel.swift */,
 				7F2C5392223D8E1000577A8D /* Claro.swift */,
 				7F2C539A223DA63400577A8D /* EPM.swift */,
 				7F2C53A6223DD33800577A8D /* Bill.swift */,
@@ -235,34 +244,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-BillsNotifier/Pods-BillsNotifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -303,10 +289,13 @@
 				7F2C5393223D8E1000577A8D /* Claro.swift in Sources */,
 				7F2C539B223DA63400577A8D /* EPM.swift in Sources */,
 				7F2C53A3223DD06000577A8D /* BillListViewModel.swift in Sources */,
+				7FE8239622F3BD6900883A30 /* Regex.swift in Sources */,
 				7F2C5399223DA21700577A8D /* NumberFormatter.swift in Sources */,
 				7F2C5383223D8DD900577A8D /* ViewController.swift in Sources */,
 				7F2C5381223D8DD900577A8D /* AppDelegate.swift in Sources */,
 				7FD188AD225FE79200388CAC /* UIImage.swift in Sources */,
+				7FE8239422F3B2FF00883A30 /* Acueducto.swift in Sources */,
+				7FE8239222F1FDA700883A30 /* Enel.swift in Sources */,
 				7F2C5397223D9A8900577A8D /* DateTransform.swift in Sources */,
 				7F2C5395223D996600577A8D /* DataRequest.swift in Sources */,
 				7FD188B1225FE7FA00388CAC /* UIView.swift in Sources */,

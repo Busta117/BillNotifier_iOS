@@ -53,38 +53,45 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BillListTableViewCell", for: indexPath) as! BillListTableViewCell
+        
         let bill = viewModel.bills[indexPath.row]
         let billsGotten = viewModel.billsGotten.value.filter { (billG) -> Bool in
             if let billG = billG as? ClaroBill, billG.accountId == "\(bill.number)" {
                 return true
             } else if let billG = billG as? EPMBill, billG.contractNumber == "\(bill.number)" {
                 return true
+            } else if let billG = billG as? EnelBill, billG.clientNumber == "\(bill.number)" {
+                return true
+            } else if let billG = billG as? AcueductoBill, billG.id == "\(bill.number)" {
+                return true
             }
             return false
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BillListTableViewCell", for: indexPath) as! BillListTableViewCell
+        
         
         if billsGotten.count > 0 {
            
             let billGotten = billsGotten.first!
             if let billGotten = billGotten as? ClaroBill {
                 cell.setup(billGotten)
-                return cell
             } else if let billGotten = billGotten as? EPMBill {
                 cell.setup(billGotten)
-                return cell
+            } else if let billGotten = billGotten as? EnelBill {
+                cell.setup(billGotten)
+            } else if let billGotten = billGotten as? AcueductoBill {
+                cell.setup(billGotten)
+            } else {
+                assertionFailure("no deberia entrar aca")
+                cell.setup(bill)
             }
             
         } else {
-            
             cell.setup(bill)
-            return cell
         }
         
-        return UITableViewCell()
-        
-        
+        return cell
         
     }
     

@@ -111,6 +111,52 @@ struct Notification {
         return [notification1, notification2, notification3]
     }
     
+    static func notifications(for enel: EnelBill) -> [Notification] {
+        
+        // 3 days before
+        var date1 = enel.dueDate
+        date1 = date1.add(TimeChunk(seconds: 0, minutes: 0, hours: 10, days: 0, weeks: 0, months: 0, years: 0))
+        date1 = date1.subtract(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 3, weeks: 0, months: 0, years: 0))
+        
+        let subtitle1 = "Parcero, la factura (\(enel.clientNumber))" + " vence en 3 dias, el valor es de \(CurrencyFormatter.shared.format(Double(enel.value))!)"
+        let notification1 = Notification(id: "\(enel.id)", date: date1, title: "Enel-Codensa", subtitle: subtitle1, count: 0)
+        
+        // 2 days before
+        let date2 = date1.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 1, weeks: 0, months: 0, years: 0))
+        let subtitle2 = "Parcero, la factura (\(enel.clientNumber))" + " vence en 3 dias, el valor es de \(CurrencyFormatter.shared.format(Double(enel.value))!)"
+        let notification2 = Notification(id: "\(enel.id)", date: date2, title: "Enel-Codensa", subtitle: subtitle2, count: 1)
+        
+        // same day
+        let date3 = date2.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 2, weeks: 0, months: 0, years: 0))
+        let subtitle3 = "Parcero, la factura (\(enel.clientNumber))" + " vence HOY!!, el valor es de \(CurrencyFormatter.shared.format(Double(enel.value))!)"
+        let notification3 = Notification(id: "\(enel.id)", date: date3, title: "Enel-Codensa", subtitle: subtitle3, count: 2)
+        
+        return [notification1, notification2, notification3]
+    }
+    
+    static func notifications(for acueducto: AcueductoBill) -> [Notification] {
+        
+        // 3 days before
+        var date1 = acueducto.dueDate
+        date1 = date1.add(TimeChunk(seconds: 0, minutes: 0, hours: 10, days: 0, weeks: 0, months: 0, years: 0))
+        date1 = date1.subtract(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 3, weeks: 0, months: 0, years: 0))
+        
+        let subtitle1 = "Parcero, la factura (\(acueducto.id))" + " vence en 3 dias, el valor es de \(CurrencyFormatter.shared.format(acueducto.value)!)"
+        let notification1 = Notification(id: "\(acueducto.id)", date: date1, title: "Acueducto", subtitle: subtitle1, count: 0)
+        
+        // 2 days before
+        let date2 = date1.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 1, weeks: 0, months: 0, years: 0))
+        let subtitle2 = "Parcero, la factura (\(acueducto.id))" + " vence en 3 dias, el valor es de \(CurrencyFormatter.shared.format(acueducto.value)!)"
+        let notification2 = Notification(id: "\(acueducto.id)", date: date2, title: "Acueducto", subtitle: subtitle2, count: 1)
+        
+        // same day
+        let date3 = date2.add(TimeChunk(seconds: 0, minutes: 0, hours: 0, days: 2, weeks: 0, months: 0, years: 0))
+        let subtitle3 = "Parcero, la factura (\(acueducto.id))" + " vence HOY!!, el valor es de \(CurrencyFormatter.shared.format(acueducto.value)!)"
+        let notification3 = Notification(id: "\(acueducto.id)", date: date3, title: "Acueducto", subtitle: subtitle3, count: 2)
+        
+        return [notification1, notification2, notification3]
+    }
+    
 }
 
 class LocalPushNotification {

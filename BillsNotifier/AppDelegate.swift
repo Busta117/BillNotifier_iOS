@@ -26,14 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("granted: \(granted)")
         }
         
+        Bill.removeAll()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        
         Bill(provider: .Claro, number: 3003301001, providerSubtype: Claro.AccountType.mobile.rawValue).save()
-        Bill(provider: .Claro, number: 04755909, providerSubtype: Claro.AccountType.home.rawValue).save()
         Bill(provider: .Claro, number: 42777469, providerSubtype: Claro.AccountType.home.rawValue).save()
-        Bill(provider: .EPM, number: 2220049).save()
+        Bill(provider: .Enel, number: 4475163).save()
+        Bill(provider: .Acueducto, number: 12172474).save()
 
-        Bill(id: 1, title: "BBVA (8910)", description: "Tarjeta de credito", dueDate: Date(year: 2019, month: 3, day: 28), isMonthly: true).save()
-        Bill(id: 2, title: "Scotiabank (9854)", description: "Tarjeta de credito", dueDate: Date(year: 2019, month: 4, day: 14), isMonthly: true).save()
-        Bill(id: 3, title: "Salud-Pension", description: "miplanilla.com", dueDate: Date(year: 2019, month: 3, day: 10), isMonthly: true).save()
+        Bill(id: 1, title: "BBVA visa lifemiles (8910)", description: "Tarjeta de credito", dueDate: Date(year: 2019, month: 3, day: 28), isMonthly: true).save()
+        Bill(id: 2, title: "Scotiabank visa lifemiles (9854)", description: "Tarjeta de credito", dueDate: Date(year: 2019, month: 4, day: 14), isMonthly: true).save()
+        Bill(id: 3, title: "Scotiabank mastercard black (1906)", description: "Tarjeta de credito", dueDate: Date(year: 2019, month: 4, day: 28), isMonthly: true).save()
+        Bill(id: 4, title: "Falabella", description: "Tarjeta de credito", dueDate: Date(year: 2019, month: 4, day: 14), isMonthly: true).save()
+        Bill(id: 5, title: "Salud-Pension", description: "miplanilla.com", dueDate: Date(year: 2019, month: 3, day: 10), isMonthly: true).save()
+        Bill(id: 6, title: "Administración", description: "Edificio Portal 50", dueDate: Date(year: 2019, month: 3, day: 14), isMonthly: true).save()
+        
         
         return true
     }

@@ -13,7 +13,7 @@ import DateToolsSwift
 class Bill: Object {
     
     enum Provider: String {
-        case Claro, EPM, Otro
+        case Claro, EPM, Enel, Acueducto, Otro
     }
     
     @objc dynamic var number: Int64 = 0
@@ -77,6 +77,12 @@ class Bill: Object {
             }
         }
         
+    }
+    
+    class func removeAll() {
+        Realm.update {
+            $0.delete($0.objects(Bill.self))
+        }
     }
     
 }

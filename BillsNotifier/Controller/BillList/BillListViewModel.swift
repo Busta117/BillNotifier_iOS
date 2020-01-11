@@ -37,7 +37,22 @@ class BillListViewModel {
                         self.billsGotten.value.append(contentsOf: epmBills)
                     }
                 })
-            } else if bill.provider == .Otro {
+            } else if bill.provider == .Enel {
+                Enel.nextBill(clientNumber: "\(bill.number)", complete: { enelBill in
+                    if let enelBill = enelBill {
+                        self.billsGotten.value.append(enelBill)
+                        self.setupAlerts(forBill: enelBill)
+                    }
+                })
+            }  else if bill.provider == .Acueducto {
+                Acueducto.nextBill(complete: { acueductoBill in
+                    if let acueductoBill = acueductoBill {
+                        self.billsGotten.value.append(acueductoBill)
+                        self.setupAlerts(forBill: acueductoBill)
+                    }
+                })
+            }
+            else if bill.provider == .Otro {
                 self.setupAlerts(forBill: bill)
             }
         }
@@ -60,6 +75,18 @@ class BillListViewModel {
     
     func setupAlerts(forBills bills: [EPMBill]) {
         Notification.notifications(for: bills).forEach({ notification in
+            LocalPushNotification.setup(for: notification)
+        })
+        
+    }
+    func setupAlerts(forBill bill: EnelBill) {
+        Notification.notifications(for: bill).forEach({ notification in
+            LocalPushNotification.setup(for: notification)
+        })
+        
+    }
+    func setupAlerts(forBill bill: AcueductoBill) {
+        Notification.notifications(for: bill).forEach({ notification in
             LocalPushNotification.setup(for: notification)
         })
         
